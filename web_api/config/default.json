@@ -3,5 +3,6 @@
     "port" : "3306",
     "user" : "root",
     "dbname":"user_management",
-    "password" : ""
+    "password" : "",
+    "jwtSecret": "secret"
 }

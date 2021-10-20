@@ -7,6 +7,10 @@ app.get('/', (req, res) =>{
     res.send('hello opti')
 })
 
+app.use(express.json());
+app.use('/user', require('./routes/api/user'));
+app.use('/auth', require('./routes/api/auth'));
+
 db.sequelize.sync().then(() =>{
     app.listen(PORT, () => console.log('server running'));
 }).catch((err) =>{
