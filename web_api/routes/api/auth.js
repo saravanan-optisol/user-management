@@ -49,14 +49,14 @@ router.post(
       if (user === null) {
         return res
           .status(400)
-          .json({ errors: [{ msg: 'Invalid Credentials0' }] });
+          .json({ errors: [{ msg: 'Invalid Credentials' }] });
       }
 
       const isMatch = await bcypt.compare(password, user.password);
       if (!isMatch) {
         return res
           .status(400)
-          .json({ errors: [{ msg: 'Invalid Credentials1' }] });
+          .json({ errors: [{ msg: 'Invalid Credentials' }] });
       }
 
       const payload = {
