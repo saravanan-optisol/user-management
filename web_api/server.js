@@ -8,8 +8,8 @@ app.get('/', (req, res) =>{
 })
 
 app.use(express.json());
-app.use('/user', require('./routes/api/user'));
-app.use('/auth', require('./routes/api/auth'));
+app.use('/api/user', require('./routes/api/user'));
+app.use('/api/auth', require('./routes/api/auth'));
 
 db.sequelize.sync().then(() =>{
     app.listen(PORT, () => console.log('server running'));
